@@ -1,0 +1,9 @@
+name: BootsBoosted
+version: ${project.version}
+main: ru.frostdelta.bootsboosted.BootsBoosted
+authors: [FrostDelta123]
+commands:
+  botinok1:
+    permission: bootsboosted.botinok
+  botinok2:
+    permission: bootsboosted.botinok
