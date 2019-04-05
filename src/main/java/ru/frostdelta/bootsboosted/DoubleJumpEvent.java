@@ -11,6 +11,7 @@ import org.bukkit.inventory.ItemStack;
 
 public class DoubleJumpEvent implements Listener {
 
+
     @EventHandler
     public void onPlayerMove(PlayerMoveEvent e) {
         Player p = e.getPlayer();

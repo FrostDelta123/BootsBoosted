@@ -10,6 +10,7 @@ public final class BootsBoosted extends JavaPlugin {
         getCommand("botinok1").setExecutor(new BootsCommand());
         getCommand("botinok2").setExecutor(new BootsCommand());
         getServer().getPluginManager().registerEvents(new DoubleJumpEvent(), this);
+        getServer().getPluginManager().registerEvents(new JetPack(), this);
     }
 
     @Override
