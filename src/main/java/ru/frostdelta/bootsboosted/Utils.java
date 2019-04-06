@@ -21,6 +21,7 @@ public class Utils {
         lore.add(type==1 ? "JumpBoots" : "JetPack");
         meta.setLore(lore);
         meta.addEnchant(Enchantment.PROTECTION_FALL, 10, true);
+        meta.setUnbreakable(true);
         item.setItemMeta(meta);
         return item;
     }
