@@ -12,7 +12,8 @@ import java.util.List;
 public class Utils {
 
     public static ItemStack create(int type){
-        ItemStack item = new ItemStack(Material.DIAMOND_BOOTS, 1);
+        Material material = type==1 ? Material.GOLD_BOOTS : Material.CHAINMAIL_BOOTS;
+        ItemStack item = new ItemStack(material, 1);
         ItemMeta meta = item.getItemMeta();
         meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         String displayName = type==1 ? "JumpBoots" : "JetPack";
