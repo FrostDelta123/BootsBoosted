@@ -12,7 +12,8 @@ import java.util.List;
 public class Utils {
 
     public static ItemStack create(int type){
-        ItemStack item = new ItemStack(Material.DIAMOND_BOOTS, 1);
+        Material material = type==1 ? Material.GOLD_BOOTS : Material.CHAINMAIL_BOOTS;
+        ItemStack item = new ItemStack(material, 1);
         ItemMeta meta = item.getItemMeta();
         meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         String displayName = type==1 ? "JumpBoots" : "JetPack";
@@ -21,6 +22,7 @@ public class Utils {
         lore.add(type==1 ? "JumpBoots" : "JetPack");
         meta.setLore(lore);
         meta.addEnchant(Enchantment.PROTECTION_FALL, 10, true);
+        meta.setUnbreakable(true);
         item.setItemMeta(meta);
         return item;
     }

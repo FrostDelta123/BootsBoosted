@@ -15,7 +15,9 @@ public class DoubleJumpEvent implements Listener {
     @EventHandler
     public void onPlayerMove(PlayerMoveEvent e) {
         Player p = e.getPlayer();
-        if(p.getInventory().getBoots() == null){
+        if(p.getInventory().getBoots() == null || p.getInventory().getBoots().getType().equals(Material.AIR)){
+            p.setAllowFlight(false);
+            p.setFlying(false);
             return;
         }
         ItemStack item = p.getInventory().getBoots();
@@ -29,7 +31,9 @@ public class DoubleJumpEvent implements Listener {
     @EventHandler
     public void onPlayerFly(PlayerToggleFlightEvent e) {
         Player p = e.getPlayer();
-        if(p.getInventory().getBoots() == null){
+        if(p.getInventory().getBoots() == null || p.getInventory().getBoots().getType().equals(Material.AIR)){
+            p.setAllowFlight(false);
+            p.setFlying(false);
             return;
         }
         ItemStack item = p.getInventory().getBoots();
