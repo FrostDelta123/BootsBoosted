@@ -52,7 +52,10 @@ public class JetPack implements Listener {
             e.setCancelled(true);
             p.setAllowFlight(false);
             p.setFlying(false);
-            p.setVelocity(p.getLocation().getDirection().add(new Vector(0, 2.5, 0)));
+
+            Vector v = p.getLocation().getDirection();
+            v.setY(0).normalize().multiply(4).setY(300.5);
+            p.setVelocity(v);
         }
     }
 
